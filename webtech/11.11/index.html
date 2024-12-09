@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <h1>Hogwarts registration page</h1>
+    <form
+      action="https://webhook.site/f01ebe8f-e2cf-48eb-96d1-74e7e255fbb6"
+      method="post"
+      class="fancy-form"
+    >
+<div>
+      <label for="">Name</label>
+      <input type="text" required placeholder="eg. Harry James Potter" />
+    </div>
+    <div>
+      <label for="dob">Date of birth</label>
+      <input type="date" name="dob" />
+    </div>
+    <div>
+        <label for="house" id="house">House</label>
+        <select name="house" id="house">
+            <option value="">Please choose an option</option>
+            <option value="Gryfindor">Gryfindor</option>
+            <option value="Hufflepuff">Hufflepuff</option>
+            <option value="Ravenclaw">Ravenclaw</option>
+            <option value="Slytherin"></option>Slytherin</option>
+        </select>
+    </div>
+    <div>
+        <label for="has-pet">I here by state that i have companion</label>
+        <input type="checkbox" id="has-pet" name="has-pet">
+        <fieldset class="conditional">
+            <legend>Companion pet</legend>
+            <label for="species">species</label>
+            <input type="text" name="pet-species">
+            <label for="pet-name">Pet Name</label>
+            <input type="text" name="pet-name" id="pet-name">
+        </fieldset>
+    </div>
+    <div>
+        <label for="email">Email</label>
+        <input type="email" required name="email" type="email" pattern=".+@hogwarts.ac.uk">
+    </div>
+    <div>
+        <label for="">Comments</label>
+        <textarea name="comments" id="comments"></textarea>
+    </div>
+    <div>
+
+      <button type="submit">Submit</button>
+    </div>
+</form>
+    
+  </body>
+</html>

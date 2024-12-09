@@ -1,0 +1,18 @@
+.sudoku {
+  margin: 1em;
+  border: medium solid black;
+  border-collapse: collapse;
+}
+.sudoku td {
+  border: thin solid black;
+  width: 2rem;
+  height: 2rem;
+  text-align: center;
+}
+
+tbody > tr:nth-child(3n) td {
+  border-bottom: medium solid black;
+}
+tbody :nth-child(3n) {
+  border-right: medium solid black;
+}

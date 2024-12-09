@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Henny+Penny&display=swap");
+h1 {
+  font-family: "Henny Penny", system-ui;
+}
+form.fancy-form {
+  background-color: mintcream;
+  max-width: 50%;
+  width: 400px;
+  overflow: hidden;
+}
+form.fancy-form div {
+  margin: 1em;
+}
+form.fancy-form label:has(+ :is(input, select, textarea)[required])::after {
+  content: "*";
+  color: red;
+  vertical-align: super;
+}
+form.fancy-form input[type="checkbox"]:not(:checked) + fieldset.conditional {
+  display: none;
+}
+
+form.fancy-form label {
+  display: block;
+}
+form.fancy-form :is(input, select, textarea) {
+  border: medium solid darkslateblue;
+  border-radius: 0.4rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+form.fancy-form > div:has(button[type="submit"]) {
+  text-align: center;
+}
+
+button {
+  background-color: darkslateblue;
+  color: white;
+}
+form.fancy-form input[type="email"]:invalid {
+  background-color: red;
+}

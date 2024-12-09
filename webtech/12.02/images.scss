@@ -1,0 +1,31 @@
+@use "sass:color";
+@use "sass:math";
+.flex-box {
+  $base-color: blue;
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  overflow: hidden;
+  & > img {
+    padding: 2rem;
+    max-width: 300px;
+  }
+
+  @mixin img($n) {
+    @for $i from 1 through $n {
+      @if ($n > 0) {
+        $current-color: color.adjust(
+          $base-color,
+          $hue: ($i - 1) * math.div(360, $n - 1)
+        );
+        & > img:nth-child(#{$i}) {
+          border: 10px solid $current-color;
+        }
+        & > img:nth-child(#{$i}) {
+          content: "#{$current-color}";
+        }
+      }
+    }
+  }
+  @include img(6);
+}

@@ -1,0 +1,36 @@
+.main-container {
+  display: flex;
+}
+.test-container,
+.controller {
+  background-color: aliceblue;
+  border: thick solid indigo;
+  margin: 0.5rem;
+}
+.test-container {
+  width: 600px;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.controller {
+  padding: 0.5rem;
+  align-self: start;
+}
+.controller > label {
+  margin: 0.5rem;
+}
+.test-container > .item {
+  height: 100px;
+  width: 100px;
+}
+.test-container .item:nth-child(odd) {
+  background-color: coral;
+}
+.test-container .item:nth-child(even) {
+  background-color: coral;
+}
